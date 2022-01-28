@@ -1,0 +1,12 @@
+x,k=map(int, input().split(" "))
+poly=input().split(" ")
+for i in range(len(poly)):
+    current=[poly[i]]
+    if "**" in current:
+        x=x**int(current[3])
+    elif current=="+":
+        x+=int(poly[i-1])+int(poly[i+1])
+if x==k:
+    print("True")
+else:
+    print("False")
